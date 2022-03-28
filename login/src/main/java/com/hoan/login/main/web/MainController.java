@@ -11,22 +11,17 @@ public class MainController {
 
     @GetMapping("/login")
     public ModelAndView login() {
-        ModelAndView mv = new ModelAndView("contents/login/login");
-        return mv;
+        return new ModelAndView("contents/login/login");
     }
 
 
     @GetMapping(value = {"/", "/index", "/main"})
     public ModelAndView main() {
-        log.info("Hello Main");
-        log.error("Error인 경우에는 출력!");
-        ModelAndView mv = new ModelAndView("contents/main/main");
-        return mv;
+        return new ModelAndView("contents/main/main");
     }
 
     @GetMapping("/hello")
     public ModelAndView hello() {
-        ModelAndView mv = new ModelAndView("contents/main/hello");
-        return mv;
+        return new ModelAndView("contents/main/hello");
     }
 }
